@@ -1,0 +1,19 @@
+title: Discrete Mathematics
+description: Notes and worked solutions
+theme: minima
+
+# must match the repo name (no trailing slash)
+baseurl: "/discrete-math"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+  solutions:
+    output: true
+    permalink: /solutions/:name/
