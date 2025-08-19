@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+      .wrap{max-width:920px;margin:2rem auto;padding:0 1rem}
+      .topnav{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+      .topnav a{text-decoration:none;color:#06c}
+      .topnav a.active{font-weight:600}
+      hr{border:0;border-top:1px solid #3335;margin:1rem 0 2rem}
+      .muted{color:#666}
+      ul.clean{list-style:none;padding-left:0}
+      ul.clean li{margin:.25rem 0}
+    </style>
+    <script>
+      window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div class="topnav">
+          <h1 style="margin:0;font-size:1.25rem;">
+            <a href="{{ site.baseurl }}/" style="text-decoration:none;color:inherit;">{{ site.title }}</a>
+          </h1>
+          <nav style="margin-left:auto;">
+            <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+            <a href="{{ site.baseurl }}/notes/" class="{% if page.url contains '/notes/' %}active{% endif %}">Notes</a>
+            <a href="{{ site.baseurl }}/solutions/" class="{% if page.url contains '/solutions/' %}active{% endif %}">Solutions</a>
+          </nav>
+        </div>
+        <p class="muted">{{ site.description }}</p>
+        <hr>
+      </header>
+
+      {{ content }}
+
+      <hr>
+      <footer class="muted">© {{ "now" | date: "%Y" }}</footer>
+    </main>
+  </body>
+</html>
