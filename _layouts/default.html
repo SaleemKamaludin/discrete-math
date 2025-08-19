@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
     <style>
-      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-      .wrap{max-width:920px;margin:2rem auto;padding:0 1rem}
-      .topnav{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
-      .topnav a{text-decoration:none;color:#06c}
-      .topnav a.active{font-weight:600}
-      hr{border:0;border-top:1px solid #3335;margin:1rem 0 2rem}
-      .muted{color:#666}
-      ul.clean{list-style:none;padding-left:0}
-      ul.clean li{margin:.25rem 0}
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .wrap { max-width: 920px; margin: 2rem auto; padding: 0 1rem; }
+      .topnav { display:flex; gap:1rem; align-items:center; margin-bottom:1rem; }
+      .topnav a { text-decoration:none; color:#06c; }
+      .topnav a.active { font-weight:600; }
+      hr { border:0; border-top:1px solid #3335; margin:1rem 0 2rem; }
+      .muted { color:#666; }
+      ul.clean { list-style:none; padding-left:0; }
+      ul.clean li { margin:.25rem 0; }
     </style>
     <script>
-      window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};
+      window.MathJax = {
+        tex: { inlineMath: [['\\(','\\)']], displayMath: [['$$','$$']] },
+        svg: { fontCache: 'global' }
+      };
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </head>
